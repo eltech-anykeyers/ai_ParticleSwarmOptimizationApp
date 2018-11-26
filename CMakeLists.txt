@@ -24,13 +24,17 @@ include_directories(
 
 # Headers
 set(HEADERS_LIST
+    include/parser.hpp
     include/particle_swarm_optimization_app.hpp
+    include/particle_swarm_optimization_widget.hpp
 )
 
 # Sources
 set(SOURCES_LIST
     src/main.cpp
+    src/parser.cpp
     src/particle_swarm_optimization_app.cpp
+    src/particle_swarm_optimization_widget.cpp
 )
 
 # Tell CMake to create the helloworld executable

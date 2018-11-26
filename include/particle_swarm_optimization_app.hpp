@@ -9,7 +9,7 @@ class ParticleSwarmOptimizationApp : public QMainWindow
 
 public:
     ParticleSwarmOptimizationApp( QWidget* parent = Q_NULLPTR );
-    ~ParticleSwarmOptimizationApp() = default;
+    virtual ~ParticleSwarmOptimizationApp() override = default;
 };
 
 #endif /// PARTICLE_SWARM_OPTIMIZATION_APP_HPP
