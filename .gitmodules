@@ -1,3 +1,4 @@
 [submodule "deps/muparser"]
 	path = deps/muparser
 	url = https://github.com/beltoforion/muparser.git
+	ignore = all
