@@ -40,9 +40,18 @@ set(SOURCES_LIST
 # Tell CMake to create the helloworld executable
 add_executable(${PROJECT_NAME} ${SOURCES_LIST} ${HEADERS_LIST})
 
+# Target for build muParser library
+add_custom_target(
+    muparser
+    COMMAND ./configure --enable-shared=no
+    COMMAND make
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/deps/muparser
+)
+add_dependencies(${PROJECT_NAME} muparser)
+
 # Link with muParser library
 target_link_libraries(
-    ai_particle_swarm_optimization
+    ${PROJECT_NAME}
     ${CMAKE_CURRENT_SOURCE_DIR}/deps/muparser/lib/libmuparser.a
 )
 
